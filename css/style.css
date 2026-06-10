@@ -1,0 +1,46 @@
+/* univarsal selector  */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* header nav a{
+    color: black;
+} */
+#head .navbar a {
+  color: black;
+}
+/* 
+a {
+  color: black;
+} */
+
+/* tag selector  */
+/* div {
+        background-color: green;
+      } */
+/* id selector  */
+#listDiv {
+  background-color: green;
+}
+
+/* class selector  */
+.imageContainer {
+  background-color: red;
+}
+h1 {
+  color: red;
+}
+
+/* .heading {
+  color: blue;
+} */
+
+#head .navbar a,
+#listDiv ul li,
+h1 {
+  color: yellow;
+}
+
+/* .listDiv ul li {
+  color: red;
+} */
