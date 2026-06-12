@@ -3,14 +3,14 @@
   margin: 0;
   padding: 0;
 }
-/* header nav a{
-    color: black;
+/* header nav a {
+  color: black;
 } */
 #head .navbar a {
   color: black;
 }
-/* 
-a {
+
+/* a {
   color: black;
 } */
 
@@ -29,6 +29,24 @@ a {
 }
 h1 {
   color: red;
+}
+
+/* h1{
+  color: yellow;
+}
+header nav a{
+  color: yellow;
+}
+
+div ul li{
+  color: yellow;
+} */
+
+h1,
+header nav a,
+div ul li {
+  color: yellow;
+  font-size: 4px;
 }
 
 /* .heading {

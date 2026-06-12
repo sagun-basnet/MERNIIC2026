@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+nav {
+  background-color: aquamarine;
+  height: 5rem;
+}
+.main {
+  border: 4px solid black;
+  height: calc(100vh - 5rem);
+}
+.container {
+  border: 4px solid black;
+  height: 100vh;
+  width: 100vw;
+}
+
+.img {
+  border: 2px solid black;
+  height: 30rem;
+  width: 40rem;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.item {
+  height: 20%;
+  width: 20%;
+  border: 2px solid black;
+}
+.item1 {
+  /* margin: 0rem 4rem; */
+  /* margin-top: -5rem; */
+  /* margin-top: 4rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  margin-right: 5rem; */
+  padding: 4rem;
+}
