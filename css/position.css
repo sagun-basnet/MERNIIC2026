@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  border: 4px solid red;
+  position: relative;
+}
+
+nav {
+  height: 5rem;
+  width: 100%;
+  background-color: aqua;
+  /* position: fixed; */
+  top: 0;
+  /* bottom:;
+  left:;
+  right:; */
+}
+p {
+  margin-top: 5rem;
+}
+.item {
+  /* margin-top: 20rem; */
+  height: 20rem;
+  width: 30rem;
+  border: 2px solid black;
+  /* position: sticky;
+  top: 0rem; */
+  position: absolute;
+  top: 0;
+  background-color: aqua;
+  top: calc(50% - 10rem);
+  left: calc(50% - 15rem);
+  /* top: 50%;
+  left: 50%; */
+  /* bottom: 0;
+  right: 0; */
+}
+h1 {
+  text-align: center;
+}
+
+/* .m-10 {
+  margin: 10rem;
+}
+
+.mt-10 {
+  margin-top: 10rem;
+}
+.mt-9 {
+  margin-top: 9rem;
+}
+.mt-8 {
+  margin-top: 8rem;
+} */
