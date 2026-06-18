@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: 100vh;
+  /* background-color: black; */
+}
+h1 {
+  font-size: 4rem;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  align-items: center;
+}
+input {
+  padding: 0.6rem;
+  width: 30rem;
+}
+button {
+  display: none;
+}
+
+/* mobile  */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .box {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .container {
+    /* background-color: red; */
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* tablet  */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .container {
+    /* background-color: blue; */
+  }
+}
+input {
+  padding-left: 2rem;
+}
+.searchDiv {
+  position: relative;
+  /* border: 2px solid green; */
+  display: flex;
+  align-items: center;
+}
+.icon {
+  border: 2px solid black;
+  position: absolute;
+  /* top: 2; */
+  left: 0.6rem;
+}
