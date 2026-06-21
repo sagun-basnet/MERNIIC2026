@@ -60,9 +60,72 @@ function add(a, b) {
   let res = a / b;
   return res;
 }
-console.log(add(1, 1));
+// console.log(add(1, 1));
 
 // const result = add(1, 1);
 
 // add(10, 5);
 // add();
+
+// const a =1;
+// const b = 2
+let arr = [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  true,
+  false,
+  null,
+  undefined,
+  "asdfasdf",
+  "d",
+  9.0,
+  [1, 2, 3, 4, 5],
+  // add(),
+  {
+    name: "asdfasdf",
+    username: "asdf",
+  },
+];
+
+arr[15] = "asdfasdf";
+
+console.log(arr[14].username);
+
+// console.log(arr[13][2]);
+console.log(arr);
+arr.push(13);
+console.log(arr);
+console.log(arr.pop());
+console.log(arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//   console.log(arr[i]);
+// }
+
+const obj = {
+  name: "jhone",
+  email: "jhone@gmail.com",
+  phone: 98123435123,
+  // myFun: add(),
+  arr: [1, 3, 4, 5, 6, 7],
+  address: {
+    country: "Nepal",
+    city: "Itahari",
+  },
+};
+
+obj.password = "ajsdflasdf";
+
+// console.log(obj.name, obj.email, obj.address.country);
+console.log(obj);
+
+let arr1 = [1, 2, 3, 4, 5, 6];
+let arr2 = [7, 8, 9, 10, 11, 12];
+
+let arr3 = arr1;
+arr3 = arr2;
+console.log(arr3);
