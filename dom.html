@@ -3,15 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <style>
+      .container {
+        display: none;
+        border: 2px solid black;
+        height: 20rem;
+        width: 25rem;
+        position: absolute;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        background-color: aqua;
+      }
+      .resetBtn {
+        display: none;
+      }
+      .mainDiv {
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        position: relative;
+      }
+      .btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+      button {
+        padding: 1rem 1.8rem;
+        border-radius: 0.4rem;
+        cursor: pointer;
+        color: white;
+        font-weight: bold;
+      }
+    </style>
     <title>Document</title>
   </head>
   <body>
-    <button onclick="alertPage()">Click</button>
+    <div class="mainDiv">
+      <button style="color: black" class="btn" id="clickBtn">Open</button>
+      <!-- <button class="resetBtn">Reset</button> -->
+      <div class="container">
+        <h1>Are you sure?</h1>
+        <div class="btns">
+          <button class="yesBtn" style="background-color: blue">Yes</button>
+          <button class="cancelBtn" style="background-color: red">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
 
-    <script>
-      let i = 0;
-    </script>
     <script src="./javascript/dom.js"></script>
   </body>
 </html>
