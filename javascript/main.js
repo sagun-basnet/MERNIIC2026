@@ -182,9 +182,9 @@
 //     }
 //     sec++;
 //     console.log("Min: " + min + " Sec: " + sec);
-minText.innterHTML = min;
-hrsText.innterHTML = hrs;
-isSecureContext.innterHTML = sec;
+// minText.innterHTML = min;
+// hrsText.innterHTML = hrs;
+// isSecureContext.innterHTML = sec;
 //   }, 1000);
 // } catch (err) {
 //   console.log(err);
@@ -210,29 +210,28 @@ isSecureContext.innterHTML = sec;
 
 // JSON.stringify(data);
 
-const user = {
-  id: 1,
-  name: "Jhon",
-  email: "jhon@gmail.com",
-  role: "user",
-};
+// const user = {
+//   id: 1,
+//   name: "Jhon",
+//   email: "jhon@gmail.com",
+//   role: "user",
+// };
 
 // localStorage.setItem("user", JSON.stringify(user));
 
-const getUser = localStorage.getItem("user");
-console.log(JSON.parse(getUser));
+// const getUser = localStorage.getItem("user");
+// console.log(JSON.parse(getUser));
 
-const handleDelete = () => {
-  localStorage.removeItem("user");
-};
+// const handleDelete = () => {
+//   localStorage.removeItem("user");
+// };
 
-const handleUpdate = () => {
-  handleDelete();
-  localStorage.setItem(asdf);
-};
+// const handleUpdate = () => {
+//   handleDelete();
+//   localStorage.setItem(asdf);
+// };
 
-const handleStart = () => {};
-const handleReset = () => {};
+// const handleStart = () => {};
+// const handleReset = () => {};
 
-
-login.innterHTML = "SignIn"
+// login.innterHTML = "SignIn"
