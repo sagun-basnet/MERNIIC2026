@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Form from "./components/Form";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
@@ -16,32 +16,31 @@ const App = () => {
   //   console.log(count);
   // };
 
-  const [isDisplay, setIsDisplay] = useState(false);
-  const handleShow = () => {
-    setIsDisplay(true);
-  };
+  // const [isDisplay, setIsDisplay] = useState(false);
+  // const handleShow = () => {
+  //   setIsDisplay(true);
+  // };
+  const [status, setStatus] = useState(false);
+  // const handleClick = () => {
+  //   // if (status) {
+  //   //   setStatus(false);
+  //   // } else {
+  //   //   setStatus(true);
+  //   // }
+  //   setStatus(!status);
+  // };
+  useEffect(() => {
+    console.log("From UseEffect");
+  }, []);
+
   return (
     <>
-      <div className="flex flex-col gap-2 justify-center items-center">
-        {/* <span>{count}</span>
-        <button onClick={handleAdd} className="bg-blue-500">
-          Add
-        </button> */}
-        <div className="flex gap-4">
-          <button onClick={handleShow} className="bg-blue-500">
-            {/* {isDisplay ? "ON" : "OFF"} */}
-          </button>
-          <Button text="Show" color="red" />
-          <Button text="Show" color="yellow" />
-          {/* <button onClick={() => setIsDisplay(false)} className="bg-red-500">
-            Hide
-          </button> */}
-        </div>
-        {isDisplay && (
-          <div
-            className={`${isDisplay ? "bg-white" : "bg-black"} h-[80vh] w-full`}
-          ></div>
-        )}
+      <div
+        className={`md:p-2 lg: xl: flex justify-center items-center h-screen w-full ${status ? "bg-white" : "bg-black"}`}
+      >
+        <button onClick={() => setStatus(!status)} className="bg-blue-500">
+          {status ? "OFF" : "ON"}
+        </button>
       </div>
     </>
   );
