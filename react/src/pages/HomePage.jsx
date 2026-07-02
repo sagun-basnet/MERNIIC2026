@@ -6,7 +6,7 @@ import Slider from "../components/Slider";
 const HomePage = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="flex">
         <HeroSection />
         <Slider />

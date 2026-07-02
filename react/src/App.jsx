@@ -1,47 +1,89 @@
 import { useEffect, useState } from "react";
 import Form from "./components/Form";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
 import Button from "./components/Button";
-
+// import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import ServicePage from "./pages/ServicePage";
+import Contact from "./pages/Contact";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import PageNotFound from "./pages/PageNotFound";
+import LoginPage from "./pages/LoginPage";
+import RootLayout from "./layout/RootLayout";
+// import DashboardLayout from "./layout/DashboardLayout";
 const App = () => {
-  // const [count, setCount] = useState(0);
-  // const handleAdd = () => {
-  //   setCount((prev) => prev + 1);
-  //   setCount((prev) => prev + 1);
-  //   // setCount(() => count + 1);
-  //   // setCount(() => {
-  //   //   count + 1;
-  //   // });
-  //   console.log(count);
-  // };
-
-  // const [isDisplay, setIsDisplay] = useState(false);
-  // const handleShow = () => {
-  //   setIsDisplay(true);
-  // };
-  const [status, setStatus] = useState(false);
-  // const handleClick = () => {
-  //   // if (status) {
-  //   //   setStatus(false);
-  //   // } else {
-  //   //   setStatus(true);
-  //   // }
-  //   setStatus(!status);
-  // };
-  useEffect(() => {
-    console.log("From UseEffect");
-  }, []);
+  const route = createBrowserRouter([
+    {
+      path: "/",
+      element: <RootLayout />,
+      children: [
+        {
+          path: "",
+          element: <HomePage />,
+        },
+        {
+          path: "/home",
+          element: <HomePage />,
+        },
+        {
+          path: "/service",
+          element: <ServicePage />,
+        },
+        {
+          path: "/about",
+          element: <AboutPage />,
+        },
+        {
+          path: "/contact",
+          element: <Contact />,
+        },
+      ],
+    },
+    // {
+    //   path: "/dashboard",
+    //   element: <DashboarLayout />,
+    //   children: [
+    //     {
+    //       path: "",
+    //       element: <Dashboard />,
+    //     },
+    //     {
+    //       path: "/dashboard/user-management",
+    //       element: <UserManagement />,
+    //     },
+    //     {
+    //       path: "/dashboard/manage-post",
+    //       element: <PostManagement />,
+    //     },
+    //   ],
+    // },
+    {
+      path: "/login",
+      element: <LoginPage />,
+    },
+    {
+      path: "*",
+      element: <PageNotFound />,
+    },
+  ]);
 
   return (
     <>
-      <div
-        className={`md:p-2 lg: xl: flex justify-center items-center h-screen w-full ${status ? "bg-white" : "bg-black"}`}
-      >
-        <button onClick={() => setStatus(!status)} className="bg-blue-500">
-          {status ? "OFF" : "ON"}
-        </button>
-      </div>
+      <RouterProvider router={route} />
+      {/* <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/service" element={<ServicePage />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+      <Footer /> */}
     </>
   );
 };
